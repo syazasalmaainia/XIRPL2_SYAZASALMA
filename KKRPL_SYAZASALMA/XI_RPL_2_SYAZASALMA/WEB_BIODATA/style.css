@@ -1,0 +1,941 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf7;
+    color: #2b2422;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: rgba(255, 250, 247, 0.96);
+
+    border-bottom: 1px solid #eadbd4;
+}
+
+.navbar {
+    width: 84%;
+    min-height: 75px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #a76555;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #766d69;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #a76555;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    width: 82%;
+    min-height: calc(100vh - 75px);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.small-title {
+    color: #a76555;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    font-family: Georgia, serif;
+
+    font-size: 62px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.home h1 span {
+    color: #a76555;
+}
+
+.description {
+    max-width: 600px;
+
+    color: #766d69;
+
+    font-size: 17px;
+}
+
+.button-area {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 12px 23px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.utama {
+    background-color: #a76555;
+    color: white;
+}
+
+.utama:hover {
+    background-color: #7e493d;
+}
+
+.kedua {
+    background-color: white;
+
+    border: 1px solid #e2d4ce;
+}
+
+.kedua:hover {
+    border-color: #a76555;
+}
+
+
+/* =========================
+   FOTO HOME
+========================= */
+
+.home-photo {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.home-photo img {
+    position: relative;
+    z-index: 2;
+
+    width: 360px;
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 180px 180px 25px 25px;
+
+    box-shadow:
+        0 25px 50px rgba(60, 40, 35, 0.15);
+}
+
+.photo-border {
+    position: absolute;
+
+    width: 360px;
+    height: 450px;
+
+    border: 1px solid #a76555;
+
+    border-radius: 180px 180px 25px 25px;
+
+    transform: translate(25px, 25px);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 90px 9%;
+}
+
+.warna {
+    background-color: #f6eeea;
+}
+
+.judul-section {
+    margin-bottom: 40px;
+}
+
+.judul-section h2 {
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    line-height: 1.2;
+}
+
+.subjudul {
+    color: #766d69;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   BIODATA
+========================= */
+
+.biodata-container {
+    display: grid;
+
+    grid-template-columns: 1.5fr 0.8fr;
+
+    gap: 25px;
+}
+
+.biodata-card,
+.quote-card,
+.about-card,
+.empty-card,
+.kelebihan-card,
+.portfolio-card {
+    background-color: white;
+
+    border: 1px solid #eadbd4;
+
+    border-radius: 20px;
+}
+
+.biodata-card {
+    padding: 10px 30px;
+}
+
+.data {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eadbd4;
+}
+
+.data:last-child {
+    border-bottom: none;
+}
+
+.data span {
+    color: #766d69;
+}
+
+.data strong {
+    text-align: right;
+}
+
+.quote-card {
+    padding: 40px;
+
+    background-color: #a76555;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.quote {
+    font-family: Georgia, serif;
+
+    font-size: 70px;
+
+    line-height: 0.5;
+
+    opacity: 0.5;
+}
+
+.quote-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   GALERI
+========================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 18px;
+}
+
+.gallery-item {
+    height: 330px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.gallery-item.besar {
+    height: 420px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TENTANG SAYA
+========================= */
+
+.about-card {
+    max-width: 950px;
+
+    padding: 35px;
+}
+
+.about-card p {
+    color: #5f5753;
+}
+
+.about-card p + p {
+    margin-top: 18px;
+}
+
+
+/* =========================
+   PENDIDIKAN
+========================= */
+
+.timeline {
+    max-width: 850px;
+
+    border-left: 2px solid #decac2;
+
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-bottom: 45px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.lingkaran {
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background-color: #a76555;
+
+    left: -44px;
+    top: 7px;
+}
+
+.timeline-content p {
+    color: #a76555;
+
+    font-weight: bold;
+}
+
+.timeline-content h3 {
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+}
+
+.timeline-content span {
+    color: #766d69;
+}
+
+
+/* =========================
+   ORGANISASI & PRESTASI
+========================= */
+
+.empty-card {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 55px 25px;
+
+    text-align: center;
+}
+
+.icon {
+    color: #a76555;
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.empty-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+}
+
+.empty-card p {
+    max-width: 600px;
+
+    margin: 8px auto 0;
+
+    color: #766d69;
+}
+
+
+/* =========================
+   KELEBIHAN
+========================= */
+
+.kelebihan-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.kelebihan-card {
+    padding: 28px;
+
+    transition: 0.3s;
+}
+
+.kelebihan-card:hover {
+    transform: translateY(-5px);
+}
+
+.kelebihan-card > span {
+    color: #a76555;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.kelebihan-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    margin: 18px 0 8px;
+}
+
+.kelebihan-card p {
+    color: #766d69;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   KOMPETENSI
+========================= */
+
+.skills {
+    max-width: 850px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px 45px;
+}
+
+.skill-name {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.skill-name span:last-child {
+    color: #766d69;
+
+    font-weight: normal;
+
+    font-size: 13px;
+}
+
+.bar {
+    height: 7px;
+
+    background-color: #dfd2cc;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.isi-bar {
+    height: 100%;
+
+    background-color: #a76555;
+
+    border-radius: 10px;
+}
+
+.html {
+    width: 75%;
+}
+
+.css {
+    width: 70%;
+}
+
+.flowchart {
+    width: 80%;
+}
+
+.erd {
+    width: 75%;
+}
+
+.uiux {
+    width: 65%;
+}
+
+.desain {
+    width: 65%;
+}
+
+
+/* =========================
+   PORTOFOLIO
+========================= */
+
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.portfolio-card {
+    min-height: 245px;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(70, 45, 40, 0.08);
+}
+
+.portfolio-card > span {
+    color: #a76555;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.portfolio-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    margin: 28px 0 8px;
+}
+
+.portfolio-card p {
+    color: #766d69;
+
+    font-size: 14px;
+}
+
+.portfolio-card small {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    color: #7e493d;
+
+    background-color: #f6eeea;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 55px 20px;
+
+    border-top: 1px solid #eadbd4;
+}
+
+.footer-logo {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    color: #a76555;
+}
+
+footer p {
+    color: #766d69;
+
+    font-size: 14px;
+
+    margin-top: 8px;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .description {
+        margin: auto;
+    }
+
+    .button-area {
+        justify-content: center;
+    }
+
+    .home-photo {
+        order: -1;
+    }
+
+    .biodata-container {
+        grid-template-columns: 1fr;
+    }
+
+    .kelebihan-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-item.besar {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .home {
+        width: 88%;
+    }
+
+    .home h1 {
+        font-size: 45px;
+    }
+
+    .home-photo img {
+        width: 280px;
+        height: 360px;
+    }
+
+    .photo-border {
+        width: 280px;
+        height: 360px;
+    }
+
+    .data {
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+    .data strong {
+        text-align: left;
+    }
+
+    .kelebihan-grid,
+    .portfolio-grid,
+    .skills,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item,
+    .gallery-item.besar {
+        height: 350px;
+
+        grid-column: auto;
+    }
+}
+
+
+/* ========================================
+   GALERI AESTHETIC
+======================================== */
+
+.gallery-aesthetic {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 45px;
+    align-items: center;
+}
+
+/* Kartu foto */
+.photo-card {
+    position: relative;
+    height: 480px;
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(80, 50, 40, 0.12);
+    overflow: visible;
+    transition: all 0.4s ease;
+}
+
+/* Foto */
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Efek saat mouse diarahkan */
+.photo-card:hover {
+    transform: translateY(-12px) rotate(0deg);
+    box-shadow: 0 25px 45px rgba(80, 50, 40, 0.18);
+}
+
+/* Posisi foto dibuat sedikit berbeda */
+.photo-one {
+    transform: rotate(-3deg);
+}
+
+.photo-two {
+    transform: translateY(20px) rotate(2deg);
+}
+
+.photo-three {
+    transform: rotate(-2deg);
+}
+
+/* Dekorasi bulat */
+.photo-decoration {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #b66b58;
+    top: -18px;
+    right: -15px;
+    z-index: 5;
+    opacity: 0.85;
+}
+
+/* Dekorasi foto kedua */
+.photo-two .photo-decoration {
+    background: #d6a28f;
+    left: -18px;
+    right: auto;
+    top: -15px;
+}
+
+/* Dekorasi foto ketiga */
+.photo-three .photo-decoration {
+    background: #c58b78;
+    top: auto;
+    bottom: -18px;
+    right: -15px;
+}
+
+/* Garis dekorasi */
+.photo-card::before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 2px;
+    background: #b66b58;
+    top: 15px;
+    left: -35px;
+    transform: rotate(-45deg);
+    opacity: 0.7;
+}
+
+/* Responsive tablet */
+@media (max-width: 950px) {
+
+    .gallery-aesthetic {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-card {
+        height: 430px;
+    }
+
+    .photo-three {
+        grid-column: 1 / -1;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+/* Responsive HP */
+@media (max-width: 600px) {
+
+    .gallery-aesthetic {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .photo-card {
+        width: 85%;
+        height: 450px;
+        margin: auto;
+    }
+
+    .photo-one,
+    .photo-two,
+    .photo-three {
+        transform: none;
+    }
+
+    .photo-three {
+        width: 85%;
+    }
+}
